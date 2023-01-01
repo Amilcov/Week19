@@ -1,3 +1,7 @@
+DIRECTIVES:   selectively change the shape(cum arata rez final aka dc are/ nu are niste campuri incluse) of our query 
+                  *** in fc de ***
+              valoarea unor vaiabile    
+
 query findPerson($id: ID, $withPlanet: Boolean!) {
   person(id: $id) {
     name,
