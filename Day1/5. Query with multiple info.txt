@@ -1,0 +1,6 @@
+It's very comman from GraphQL to be use to return many things in ONE query:
+  ex: 
+  {
+    person {name, age, ...},
+    city { name, country, ...}
+  }
