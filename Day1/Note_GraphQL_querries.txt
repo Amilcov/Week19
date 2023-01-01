@@ -1,0 +1,26 @@
+1.
+{
+ person(personID: "1") {
+   name,
+   mass
+ } 
+}
+
+
+
+2.
+query {
+ person(personID: "1") {
+  name,
+  mass
+ }
+}
+
+3.
+query findLuke {
+ person(personID: "1") {
+  name,
+
+ }
+}
+
