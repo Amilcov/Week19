@@ -1,0 +1,53 @@
+1. Interfata: Character care poate fi interogata dupa campurile: id sau name
+
+
+
+      interface Character {
+        id: ID!,
+        name: String!
+      }
+    
+2. Putem implementa 2 tipuri de charactere:
+
+        type Muggle implements Character {
+          id: ID!,
+          name: String!
+        }
+
+        type Wizzard implements Character {
+         id: ID!,
+         name: String!
+         house: [House]!    
+      }
+
+3. Query:
+ 
+and query:
+    query FinhCharacter {
+      character(id: 117) { 
+         name,
+         house
+      }
+    }
+    Asta ar da err pt ca house nu e un field in Muggle, asa ca trebuie sa luam val din house doar pt characterele Wizard
+    
+    =====>
+    
+        query FindCharacter {
+        charater(id: 117) {
+           name
+           ... on Wizard {
+             house
+          }   
+        }
+       }
+   
+   
+
+
+   
+
+
+  
+
+
