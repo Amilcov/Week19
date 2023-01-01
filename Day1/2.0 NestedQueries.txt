@@ -1,0 +1,16 @@
+{
+ person(id: "cGVvcGxlOjE=") {
+   name,
+   mass,
+  homeworld {
+    id,
+    name,
+    diameter,
+    population
+  },
+  species {
+    name
+  }
+ } 
+}
+
