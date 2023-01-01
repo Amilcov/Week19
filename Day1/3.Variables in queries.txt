@@ -34,4 +34,4 @@ Defining the args directly into the query string:
          }
       }
  
-Note: Variables in the declaration of query start with $:   $id 
+Note: Variables in GraphQL are define with $ sign:   $id 
