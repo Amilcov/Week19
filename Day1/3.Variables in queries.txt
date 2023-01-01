@@ -35,3 +35,9 @@ Defining the args directly into the query string:
       }
  
 Note: Variables in GraphQL are define with $ sign:   $id 
+
+      $id: type_of_field 
+            
+             unde type of field must match our schema:     (person schema
+                                                                 id: ID
+                                                           )
