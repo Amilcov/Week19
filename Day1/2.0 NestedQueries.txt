@@ -1,4 +1,4 @@
-{
+query FindLuke {
  person(id: "cGVvcGxlOjE=") {
    name,
    mass,
