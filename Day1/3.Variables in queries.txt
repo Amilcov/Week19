@@ -34,10 +34,25 @@ Defining the args directly into the query string:
          }
       }
  
-Note: Variables in GraphQL are define with $ sign:   $id 
+Note:  2.1 Variables in GraphQL are define with $ sign:   $id 
 
-      $id: type_of_field 
+             $id: type_of_field 
             
-             unde type of field must match our schema:     (person schema
+        2.2 unde type of field must match our schema:     (person schema
                                                                  id: ID
                                                            )
+
+                                           =====>  query findLuke($id: ID) { }
+        2.3  NOW, query string will receiv the value from the argument definded in the query
+                                           =====>  person(id: $id) 
+                                           
+                                         ________________________________________________________
+                         2.1 + 2.2 + 2.3  =====>  
+                                            query findLuke($id: ID) {
+                                               person(id: $id) {
+                                                    ....
+                                               }
+                                            }
+
+                                      declaram variabila { $id: "cGVvcGxlOjE="}
+
