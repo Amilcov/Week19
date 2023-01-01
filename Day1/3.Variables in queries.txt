@@ -21,13 +21,13 @@ variabales:
 
 
 1. 1
-Passing the variables into the query string:
+Defining the args directly into the query string:
          query findLuke {
             person(id: "cGVvcGxlOjE=") {
                  ....
             }
          }
- 1.2 Passing the variables directly into the query:
+ 1.2 Defining the args directly into the string:
       query findLuke($id: ID) {
          person(id: $id) {
               ....
