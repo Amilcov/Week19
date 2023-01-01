@@ -31,3 +31,8 @@ unde vaiables:
     "withPlanet": false
     }
  
+
+
+Nota 3: There are 2 types of Directives in standard GraphQL: 
+       @if 
+       @skip (inversul lui if) - daca condiia e adev se ship @skip(id: $withPlanet) - daca planet is true nu se va introduce campul care are directiva
