@@ -1,4 +1,4 @@
-query findLuke($id: ID) {
+query findPerson($id: ID) {
  person(id: $id) {
    name,
    mass,
