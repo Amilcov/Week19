@@ -1,0 +1,19 @@
+query findLuke($id: ID) {
+ person(id: $id) {
+   name,
+   mass,
+  homeworld {
+    id,
+    name,
+    diameter,
+    population
+  },
+  species {
+    name
+  }
+ } 
+}
+
+{
+"id": "cGVvcGxlOjE="
+}
