@@ -14,6 +14,24 @@ query findLuke($id: ID) {
  } 
 }
 
+variabales: 
 {
 "id": "cGVvcGxlOjE="
 }
+
+
+1. 1
+Passing the variables into the query string:
+         query findLuke {
+            person(id: "cGVvcGxlOjE=") {
+                 ....
+            }
+         }
+ 1.2 Passing the variables directly into the query:
+      query findLuke($id: ID) {
+         person(id: $id) {
+              ....
+         }
+      }
+ 
+Note: Variables in the declaration of query start with $:   $id 
