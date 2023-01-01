@@ -15,6 +15,9 @@ query findPerson($id: ID, $withPlanet: Boolean!) {
 }
 
 
+
+Nota : 0 Directive start with symbol: @
+
 Nota: 
     1. pt a indica ca valoarea arg $withPlanet e obigatoriu de trimis: se add ! (exclamation mark)
         OK: Boolean!
