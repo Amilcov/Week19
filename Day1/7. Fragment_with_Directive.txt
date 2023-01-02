@@ -1,0 +1,42 @@
+Putem selecta cand un camp din fields sa apara in result of the query using DIRECTIVE:
+
+1. ca si  variables declaram: 
+    {
+      "showMass": true,
+      "showPlanet": false
+    }
+
+2. definim query
+    query fragmentWithDirective($showMass: Boolean! ,$showPlanet:Boolean!) {
+      person1: person(personID: "1") {
+        ... personFragment
+      },
+       person2: person(personID: "2") {
+        ... personFragment
+      }
+    }
+
+
+    fragment personFragment on Person {
+      name,
+      mass  @include(if: $showMass),
+      homeworld @include(if: $showPlanet){
+        name,
+        id
+      } 
+    }
+    
+    
+    3. result:
+     {
+      "data": {
+        "person1": {
+          "name": "Luke Skywalker",
+          "mass": 77
+        },
+        "person2": {
+          "name": "C-3PO",
+          "mass": 75
+        }
+      }
+    }
