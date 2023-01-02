@@ -1,0 +1,11 @@
+in GraphQL sunt 2 tipuri de date:
+
+
+
+1.1 Scalar:  String, Boolean, Int, Float, ID
+1.2 Object: care au campuri care definesc proprietatile acelui tip. Ex Person object (care este o resursa din proiect)
+
+
+
+2. In orice GraphQL schema se pot declara Scalar & Object Type.
+   Ex de custom Scalar DEFINIT: PT DATE  pt care trebuie definit cum se  valideaza & serializeaza/ deserializeaza
