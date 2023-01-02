@@ -34,7 +34,7 @@ query MultiRowsFromSameSchema{
             }
 
 
-Note: bc the return of result will be a JSON we have to name diffrentntly the key of the json (BY DEFAULT THEY RECEIVED THE SAME NAME AS SCHEMA => having 2 <> rows from saem schema would => in same name.   {
+Note: bc the return of result will be a JSON we have to name diffrentntly the key of the json (BY DEFAULT THEY RECEIVED THE SAME NAME AS SCHEMA => having 2 <> rows from same schema would  result => in same name.   {
               "data": {
                 "person": {...},
                 "person": {... }
