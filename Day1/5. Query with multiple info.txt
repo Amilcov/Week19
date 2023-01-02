@@ -1,6 +1,50 @@
-It's very comman from GraphQL to be use to return many things in ONE query:
+1. 
+   It's very comman from GraphQL to be use to return many things in ONE query:
   ex: 
   {
     person {name, age, ...},
     city { name, country, ...}
   }
+
+
+2. Also can return diffrent rows on the same scheme:
+
+query MultiRowsFromSameSchema{
+  person1: person(personID: "1"){
+    name,
+    mass
+  },
+  person(personID: "2") {
+    name,
+    mass
+  }
+}
+   RETURN:    
+             {
+              "data": {
+                "person1": {
+                  "name": "Luke Skywalker",
+                  "mass": 77
+                },
+                "person": {
+                  "name": "C-3PO",
+                  "mass": 75
+                }
+              }
+            }
+
+
+Note: bc the return of result will be a JSON we have to name diffrentntly the key of the json (BY DEFAULT THEY RECEIVED THE SAME NAME AS SCHEMA => having 2 <> rows from saem schema would => in same name.   {
+              "data": {
+                "person": {...},
+                "person": {... }
+              }
+            } ) 
+
+So we use alliases. 
+aliasses is adding 
+         MyAlliasName: 
+         before query string
+  
+  
+
