@@ -23,3 +23,22 @@ Repeat code:
       person1: person(id: "1"){... personFragment},
       person2: person(id: "2"){... personFragment},
    }
+
+ex: 
+
+       query useFragmentForDRY{
+        person1: person(personID: "1") {
+         ...personFragment
+       },
+        person2: person(personID: "2") {
+         ...personFragment
+       },
+
+       }
+
+       fragment personFragment on Person {
+         name,
+         mass
+       }
+         on link:
+         https://graphql.org/swapi-graphql?query=query%20useFragmentForDRY%7B%0A%20person1%3A%20person(personID%3A%20%221%22)%20%7B%0A%20%20...personFragment%0A%7D%2C%0A%20person2%3A%20person(personID%3A%20%222%22)%20%7B%0A%20%20...personFragment%0A%7D%2C%0A%0A%7D%0A%0Afragment%20personFragment%20on%20Person%20%7B%0A%20%20name%2C%0A%20%20mass%0A%7D&operationName=useFragmentForDRY
