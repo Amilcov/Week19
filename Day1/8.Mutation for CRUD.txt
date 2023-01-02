@@ -1,0 +1,30 @@
+Usually when ppl talk about GrapyQL they talk about fetching recors from database + CRUD operations => mutations 
+
+1. Syntax:
+
+    mutation {
+
+    }
+    
+    
+2. 
+
+   mutation {
+      mutationName (k1: "V1", k2" "V2") {
+          k1,
+          k2,
+          association {
+              id,
+              name
+          }
+      }
+
+    }
+ 
+    
+    
+    
+    
+    
+    
+    
