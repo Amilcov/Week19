@@ -1,0 +1,25 @@
+1. Instead of repeating the list of field we want to retrive from the same sachema for each row we DRY our code by using fragment
+
+Repeat code: 
+{
+ person1: person(id: "1") {
+        name,
+        mass
+  }, 
+  person2: person(id: "2") {
+        name,
+        mass
+  }, 
+}
+
+2. we define a  fragment. Syntax is: 
+    fragment personFragment on Person{
+       name,
+       mass
+    }
+    
+3. use:
+   {
+      person1: person(id: "1"){... personFragment},
+      person2: person(id: "2"){... personFragment},
+   }
